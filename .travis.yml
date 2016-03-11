@@ -5,29 +5,11 @@ python:
  - 2.7
 
 before_install:
- - chmod +x ./scripts/ciinstall
- - pip install virtualenv
-
-install: ./scripts/ciinstall
+ - echo before_install
+install:
+ - echo install
 
 before_script:
- - chmod +x ./scripts/cibuild
-script: ./scripts/cibuild
-
-addons:
-  apt:
-    sources:
-      - libsdl1.2debian
-      - libfdt1
-      - libpixman-1-0
-
-env:
-  global:
-    - PEBBLE_TOOL=4.2
-
-# branches:
-#   only:
-#     -
-# branches
-#   except:
-#     -
+ - echo before_script
+script:
+ - echo script
