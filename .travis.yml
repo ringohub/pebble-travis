@@ -5,11 +5,11 @@ python:
  - 2.7
 
 before_install:
- - echo before_install
+ - chmod +x ./scripts/ciinstall
 install:
- - echo install
+ - ./scripts/ciinstall
 
 before_script:
- - echo before_script
+ - chmod +x ./scripts/cibuild
 script:
- - echo script
+ - ./scripts/cibuild
