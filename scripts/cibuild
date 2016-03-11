@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# /scripts/cibuild
 set -e # halt script on error
 
-echo Hello Script Step
+# Pipe 'yes' into pebble tool to accept terms and conditions
+yes | ./pebble-dev/pebble-sdk-$PEBBLE_TOOL-linux64/bin/pebble build
