@@ -16,8 +16,3 @@ rm -rf pebble-tool
 # Get the 'new' Pebble Tool
 git clone https://github.com/cjwilliams/pebble-tool.git --branch feature/add-release-manager
 echo "filepicker==0.2.2" >> requirements.txt
-
-# cd pebble-tool
-# pip install requirements.txt
-# cd ..
-# pip install requirements.txt
