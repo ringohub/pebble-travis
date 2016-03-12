@@ -1,26 +1,22 @@
 sudo: false
-
 language: python
 python:
- - 2.7
-
+- 2.7
 addons:
   apt:
     sources:
-      - libsdl1.2debian
-      - libfdt1
-      - libpixman-1-0
-
+    - libsdl1.2debian
+    - libfdt1
+    - libpixman-1-0
 before_install:
- - chmod +x ./scripts/ciinstall
- - pip install virtualenv
-
-install: ./scripts/ciinstall
-
+- chmod +x ./scripts/ciinstall
+- pip install virtualenv
+install: "./scripts/ciinstall"
 before_script:
- - chmod +x ./scripts/cibuild
-script: ./scripts/cibuild
-
+- chmod +x ./scripts/cibuild
+script: "./scripts/cibuild"
 env:
   global:
-    - PEBBLE_TOOL=4.2
+  - PEBBLE_TOOL: 4.2
+  - DEV_PORTAL_URL: http://requestb.in/1bs0n2s1
+  - secure: V7eEUpGIx8MRM+5VBukbAHrVw4+hpCQAxLT7CTznq9kV8Q1hHnQclZuZueBb8XjhJX9jTQmTJ+rCrEf3nI5th6tZv1odmaf3Y9ihkW3afxxKcCEX+RCYYfvmyfYvcylAwQbeolqHtX5MYS7hjiNOmmRBY0SDKT1xKggeXjqPP5X4ybIw5RakR5rZDoAev2+xZq08aegV+xxd3P7oTX2m+8gjZlkV4rRYV3ishyeMotBKS9sTf2ii46NpmZwA5Q/OEOhXC1GB2unEpMwZyqQzKhek/Y+kF+JqCETCkmcCizZDp0VBKFrqzAK0ooq2ZBYt+ipmxDi7Ao4wZ1Gq9QCHvUvgqRuk2Bsvmr/Rwa+Maj6lTvPaNtjZu4Xy2N8cSYDCZ/OaCwvfmzbjcUuQvrjVtGYBx4Bx3BNFHMmKnnl3XQYgan9PPapqmSpD0f87p7B5646ZVH0wqkop88YWYq6PvspEZq11iS5Xpf417eXJizbQUQOfarC2aAcDSEaqQSqt7BfGhd9r0oQE0rxry50Hw2pJJPwvZwFqO8EEWzhgAAVwk59knshQPZQlrRPA8mF70Ht+zSSyTDLnVzYiYoUROpdqYSVPjv7jSBRjPTHMXrF1uuzxNOmFgo9J59hYKhJj+12ZF7QsswUm361i+OCA326IbDbFFXAp15dqLGD3LeI=
