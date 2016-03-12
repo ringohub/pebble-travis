@@ -2,12 +2,22 @@
 set -e # halt script on error
 
 mkdir pebble-dev
+
+# Get / Install the SDK
 cd pebble-dev
 curl -O https://s3.amazonaws.com/assets.getpebble.com/pebble-tool/pebble-sdk-$PEBBLE_TOOL-linux64.tar.bz2
 tar -jxf pebble-sdk-$PEBBLE_TOOL-linux64.tar.bz2
+rm pebble-sdk-$PEBBLE_TOOL-linux64.tar.bz2
 
+# Kill the existing Pebble Tool
 cd pebble-sdk-$PEBBLE_TOOL-linux64
-virtualenv --no-site-packages .env
-source .env/bin/activate
-pip install -r requirements.txt
-deactivate
+rm -rf pebble-tool
+
+# Get the 'new' Pebble Tool
+git clone https://github.com/cjwilliams/pebble-tool.git --branch feature/add-release-manager
+echo "filepicker==0.2.2" >> requirements.txt
+
+# cd pebble-tool
+# pip install requirements.txt
+# cd ..
+# pip install requirements.txt
