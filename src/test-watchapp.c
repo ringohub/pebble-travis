@@ -1,6 +1,6 @@
 #include <pebble.h>
 
-static Window *window
+static Window *window;
 static TextLayer *text_layer;
 
 static void select_click_handler(ClickRecognizerRef recognizer, void *context) {
