@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/cat-haines/test-watchapp.svg?branch=master)](https://travis-ci.org/cat-haines/test-watchapp)
+[![Build Status](https://travis-ci.org/cat-haines/test-watchapp.svg?branch=master)](https://travis-ci.org/ringohub/pebble-travis)
 
 # pebble-travis
 
